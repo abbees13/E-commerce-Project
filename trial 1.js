@@ -183,5 +183,28 @@ const blindbox = [
   },
 ];
 
-const result = blindbox.filter((blindbox) => (blindbox.type = "Art Figure"));
-console.log(result[1]); //remove [1] when ready to add to web, too many entities
+function filterCategory(cat) {
+  let result = blindbox.filter((box) => box.type === cat);
+  return result;
+}
+/* res = filterCategory("Art Figure");
+console.log(res); */
+
+/* const cart = [
+  { Name: blindbox.name },
+  { Series: blindbox.series },
+  { Price: blindbox.price },
+  { qty: 0 },
+]; */
+
+const cart = [];
+function addToCart(figure) {
+  /* let qty = cart.push(blindbox);
+  console.log(qty) */
+  let ugly = cart.push(
+    `${blindbox.name}`,
+    `${blindbox.series}`,
+    `${blindbox.price}`,
+  );
+}
+console.log();
