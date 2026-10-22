@@ -198,13 +198,10 @@ console.log(res); */
 ]; */
 
 const cart = [];
-function addToCart(figure) {
+function addToCart(item) {
   /* let qty = cart.push(blindbox);
   console.log(qty) */
-  let ugly = cart.push(
-    `${blindbox.name[]}`,
-    `${blindbox.series}`,
-    `${blindbox.price}`,
-  );
+  cart.push(item);
+  total += blindbox.price;
 }
 console.log();
