@@ -202,7 +202,7 @@ function addToCart(figure) {
   /* let qty = cart.push(blindbox);
   console.log(qty) */
   let ugly = cart.push(
-    `${blindbox.name}`,
+    `${blindbox.name[]}`,
     `${blindbox.series}`,
     `${blindbox.price}`,
   );
