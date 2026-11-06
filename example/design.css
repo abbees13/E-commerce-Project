@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Silkscreen:wght@400;700&display=swap');
+
+html,
+body,
+*{
+    font-size: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.container{
+    background-color: #fff5be;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80vw;
+    background-color: #895737;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    height: 55rem;
+    background-color: #502503;
+    margin: 3rem auto;
+    padding: 5rem;
+    border-radius: 1rem;
+}
+.card-header{
+    color: #fff5be;
+    justify-content: center;
+    font-size: 8rem;
+    padding: 1rem;
+}
+.card img{
+    color: #fff5be;
+    width: 10rem;
+    height: 10rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+.card p{
+    color: #fff5be;
+    font-size: 8rem;
+}

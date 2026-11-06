@@ -183,8 +183,8 @@ const blindbox = [
   },
 ];
 
-function filterCategory(cat) {
-  let result = blindbox.filter((box) => box.type === cat);
+function filterCategory(figure) {
+  let result = blindbox.filter((box) => box.type === figure);
   return result;
 }
 /* res = filterCategory("Art Figure");
