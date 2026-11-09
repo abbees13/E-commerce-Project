@@ -1,8 +1,8 @@
 let item = [
-  { name: Chaka, price: 29.99 },
-  { name: dimoo, price: 29.99 },
-  { name: hirorno, price: 29.99 },
-  { name: america, price: 29.99 },
+  { name: "Chaka", price: 29.99 },
+  { name: "dimoo", price: 29.99 },
+  { name: "hirorno", price: 29.99 },
+  { name: "america", price: 29.99 },
 ];
 
 function inject(item) {
@@ -10,10 +10,18 @@ function inject(item) {
   container.insertAdjacentHTML(
     "beforeend",
     `<div class = "card">
-        <h2 class = "card-header"> ${item.name} </h2>
         <img src = "chaka popmart.webp"
         alt = "chaka figure"/>
-         <p> ${item.price} </p>
+        <h2 class = "card-header"></h2>
+         <p></p>
+         <button id = "btn">Add to Cart</button>
     </div>`,
   );
 }
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) =>
+  button.addEventListener("click", function (event) {
+    console.log(event.target.closest(".card").getAttribute("data-item"));
+  }),
+);
