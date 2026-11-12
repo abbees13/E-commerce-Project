@@ -6,7 +6,7 @@
     type: "Art Figure/Plush Pendant",
 
  */
-const blindbox = [
+const item = [
   {
     figurename: "SKULLPANDA",
     series: "Where time Dwells",
