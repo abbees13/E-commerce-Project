@@ -164,7 +164,7 @@ const blindbox = [
     series: "The Secret Theatre Club",
     price: 29.99,
     type: "Plush Pendant",
-    img: "./img/theatre.avif",
+    img: "./img/threatre.avif",
   },
   {
     figurename: "CHAKA",

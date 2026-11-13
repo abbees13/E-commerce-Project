@@ -1,13 +1,36 @@
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="design.css"/>
+    <style>
+    .background--custom {
+      background: linear-gradient(90deg, #6B4984, #2B2F77, #070B34);
+      background-size: 300% 300%;
+      animation: gradient 4s alternate infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 100%;
+      }
+    }
+    </style>
 </head>
-
-
     <body>
+        <div class="background--custom">
         <div class = "container">
             <!-- <div class = "card">
                 <img src = ""
@@ -18,6 +41,7 @@
             </div> -->
             
         </div>
-        <script src="app.js"></script>
+        </div>
+        <script src = "app.js"></script>
     </body>
 </html>
