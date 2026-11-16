@@ -218,6 +218,7 @@ function inject(blindbox) {
     );
   });
 }
+
 inject(blindbox);
 
 const buttons = document.querySelectorAll("button");
@@ -226,3 +227,8 @@ buttons.forEach((button) =>
     console.log(event.target.closest(".card").getAttribute("data-item"));
   }),
 );
+
+function addtoCart(shop) {
+  const scart = document.querySelector(".scart");
+  scart.insertAdjacentElement(`display: center;`);
+}
