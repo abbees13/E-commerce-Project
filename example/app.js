@@ -228,7 +228,9 @@ buttons.forEach((button) =>
   }),
 );
 
-function addtoCart(shop) {
-  const scart = document.querySelector(".scart");
-  scart.insertAdjacentElement(`display: center;`);
+const cart = document.querySelector(".cart");
+cart.addEventListener("click", showCart);
+
+function showCart() {
+  document.querySelector(".cart").style.display = "flex";
 }
