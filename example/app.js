@@ -228,9 +228,19 @@ buttons.forEach((button) =>
   }),
 );
 
-const cart = document.querySelector(".cart");
+/* const cart = document.querySelector(".cart");
 cart.addEventListener("click", showCart);
 
 function showCart() {
   document.querySelector(".cart").style.display = "flex";
+} */
+
+const cart = document.querySelector(".cart");
+cart.addEventListener("clicked", popCart);
+function popCart() {
+  if (cart.style.display === "none") {
+    cart.style.display = "flex";
+  } else {
+    cart.style.display = "none";
+  }
 }

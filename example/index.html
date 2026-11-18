@@ -17,14 +17,17 @@
       <!-- <div class = "card">
                 <img src = ""
                 alt = "chaka figure"/>
-                <h2 class = "card-header"> ${item.name} </h2>
-                <p> ${item.price} </p>
+                <h2 class = "card-header"> ${blindbox.name} </h2>
+                <p> ${blindbox.price} </p>
                 <button id = "btn">Add to Cart</button>
             </div> -->
     </div>
-    <button onclick="showCart()" id="shop">Shopping Cart</button>
+    <button id="shop">Shopping Cart</button>
     <div class="cart">
       <h2>Shopping Cart</h2>
+      <div class="items">
+        <p>${blindbox.name} ~ ${blindbox.series} | ${blindbox.price} | total</p>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
