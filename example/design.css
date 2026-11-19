@@ -70,13 +70,14 @@ body,
     justify-content: center;
     padding: 2rem;
 }
-.btn{
-    height: 6rem;
+.cart-btn{
+    background-color: #eeff00;
+    border: 1px solid #ff07b4;
+    text-align: center;
+    height: 5rem;
     padding: 0 3rem;
-    border-radius: 5rem;
-    background-color: #fbda4b;
-    border: 1px solid #773d03;
-    font-size: 4rem;
+    border-radius: 1.5rem;
+    font-size: 3rem;
     cursor: pointer;
     transition: all 0.5s;
 }

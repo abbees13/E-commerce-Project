@@ -39,3 +39,10 @@ btn.addEventListener("click", function () {
 //select the container
 //forEach on items to inject to screen
 //select add cart buttons
+
+document.querySelector("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  let x = document.querySelector("#coupon").value;
+  console.log("x");
+  x.value = "";
+});

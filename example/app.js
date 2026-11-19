@@ -36,7 +36,7 @@ const blindbox = [
   },
   {
     figurename: "SKULLPANDA",
-    series: "× My Little Pony",
+    series: "My Little Pony",
     price: 36.99,
     type: "Plush Pendants",
     img: "./img/pony.avif",
@@ -208,12 +208,12 @@ function inject(blindbox) {
     const container = document.querySelector(".container");
     container.insertAdjacentHTML(
       "beforeend",
-      ` <div class = "card">
+      ` <div class = "card" data-item="${blindbox.figurename} ~ ${blindbox.series}">
         <img src = ${blindbox.img}
-        alt = "figure"/>
+        alt = "${blindbox.figurename} ~ ${blindbox.series} figure"/>
         <h2 class = "card-header"> ${blindbox.figurename} ~ ${blindbox.series}</h2>
         <p> $${blindbox.price} </p>
-        <button id = "btn">Add to Cart</button>
+        <button id = "btn" class="cart-btn">Add to Cart</button>
       </div>`,
     );
   });
@@ -221,7 +221,7 @@ function inject(blindbox) {
 
 inject(blindbox);
 
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(".cart-btn");
 buttons.forEach((button) =>
   button.addEventListener("click", function (event) {
     console.log(event.target.closest(".card").getAttribute("data-item"));
@@ -235,8 +235,11 @@ function showCart() {
   document.querySelector(".cart").style.display = "flex";
 } */
 
+const scart = document.querySelector("#shop");
 const cart = document.querySelector(".cart");
-cart.addEventListener("clicked", popCart);
+scart.addEventListener("click", function () {
+  popCart();
+});
 function popCart() {
   if (cart.style.display === "none") {
     cart.style.display = "flex";
