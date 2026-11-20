@@ -218,22 +218,22 @@ function inject(blindbox) {
     );
   });
 }
-
 inject(blindbox);
 
 const buttons = document.querySelectorAll(".cart-btn");
+
 buttons.forEach((button) =>
   button.addEventListener("click", function (event) {
     console.log(event.target.closest(".card").getAttribute("data-item"));
+    cart.insertAdjacentHTML(
+      "beforeend",
+      `<div class = "item"> 
+            <h2>${blindbox.name} ~ ${blindbox.series}"</h2>
+           <p>${blindbox.price} total</p> 
+        </div>`,
+    );
   }),
 );
-
-/* const cart = document.querySelector(".cart");
-cart.addEventListener("click", showCart);
-
-function showCart() {
-  document.querySelector(".cart").style.display = "flex";
-} */
 
 const scart = document.querySelector("#shop");
 const cart = document.querySelector(".cart");
