@@ -208,7 +208,7 @@ function inject(blindbox) {
     const container = document.querySelector(".container");
     container.insertAdjacentHTML(
       "beforeend",
-      ` <div class = "card" data-item="${blindbox.figurename} ~ ${blindbox.series}">
+      ` <div class = "card" data-item="${blindbox.series}">
         <img src = ${blindbox.img}
         alt = "${blindbox.figurename} ~ ${blindbox.series} figure"/>
         <h2 class = "card-header"> ${blindbox.figurename} ~ ${blindbox.series}</h2>
@@ -224,16 +224,22 @@ const buttons = document.querySelectorAll(".cart-btn");
 
 buttons.forEach((button) =>
   button.addEventListener("click", function (event) {
-    console.log(event.target.closest(".card").getAttribute("data-item"));
-    cart.insertAdjacentHTML(
-      "beforeend",
-      `<div class = "item"> 
-            <h2>${blindbox.name} ~ ${blindbox.series}"</h2>
-           <p>${blindbox.price} total</p> 
-        </div>`,
-    );
+    let x = event.target.closest(".card").getAttribute("data-item");
+    const result = blindbox.find((box) => `${box.series}` === x);
+    console.log(result);
+    insertItem(result);
   }),
 );
+
+function insertItem() {
+  cart.insertAdjacentHTML(
+    "beforeend",
+    `<div class = "item"> 
+            <h2>${result.figurename} ~ ${result.series}</h2>
+           <p>${result.price} | total</p> 
+        </div>`,
+  );
+}
 
 const scart = document.querySelector("#shop");
 const cart = document.querySelector(".cart");

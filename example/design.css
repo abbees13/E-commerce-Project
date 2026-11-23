@@ -86,12 +86,10 @@ body,
     padding: 2rem;
     margin: 4rem;
     height: 100rem;
-    width: 180rem;
+    width: 95%;
     background-color: red;
     justify-content: center;
     flex-direction: column;
-    overflow-x: auto; /
-    white-space: nowrap; /
 }
 .cart h2{
     font-size: 6rem;
@@ -114,20 +112,19 @@ body,
 }
 .item{
     display: flex;
-    padding: 2rem;
-    margin: 4rem;
-    height: 5rem;
-    width: 180rem;
+    margin: 2rem;
+    height: 6rem;
+    width: 98%;
     background-color: rgb(43, 255, 0);
     justify-content: space-between;
 }
 .item h2{
     text-align: right;
     align-items: right;
-    font-size: 5rem;
+    font-size: 3rem;
 }
 .item p{
     text-align: left;
     align-items: left;
-    font-size: 5rem;
+    font-size: 3rem;
 }
