@@ -202,6 +202,7 @@ const blindbox = [
     img: "./img/light.png",
   },
 ];
+const shoppingcart = [];
 
 function inject(blindbox) {
   blindbox.forEach((blindbox) => {
@@ -221,28 +222,28 @@ function inject(blindbox) {
 inject(blindbox);
 
 const buttons = document.querySelectorAll(".cart-btn");
-
 buttons.forEach((button) =>
   button.addEventListener("click", function (event) {
     let x = event.target.closest(".card").getAttribute("data-item");
     const result = blindbox.find((box) => `${box.series}` === x);
     console.log(result);
     insertItem(result);
+    shoppingcart.push(result);
   }),
 );
 
-function insertItem() {
+const cart = document.querySelector(".cart");
+function insertItem(item) {
   cart.insertAdjacentHTML(
     "beforeend",
     `<div class = "item"> 
-            <h2>${result.figurename} ~ ${result.series}</h2>
-           <p>${result.price} | total</p> 
+            <h2>${item.figurename} ~ ${item.series}</h2>
+           <p>${item.price} | xQuality</p> 
         </div>`,
   );
 }
 
 const scart = document.querySelector("#shop");
-const cart = document.querySelector(".cart");
 scart.addEventListener("click", function () {
   popCart();
 });
