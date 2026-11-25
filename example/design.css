@@ -85,7 +85,6 @@ body,
     display: inline-flex;
     padding: 2rem;
     margin: 4rem;
-    height: 100rem;
     width: 95%;
     background-color: red;
     justify-content: center;
@@ -95,6 +94,13 @@ body,
     font-size: 6rem;
     align-items: center;
     text-align: center;
+}
+.itemb {
+    padding: 2rem;
+    margin: 4rem;
+    width: 85%;
+    background-color: rgb(68, 0, 255);
+    flex-direction: column; 
 }
 .shop-btn{
     height: 5rem;
@@ -116,15 +122,36 @@ body,
     height: 6rem;
     width: 98%;
     background-color: rgb(43, 255, 0);
-    justify-content: space-between;
+    justify-content:baseline;
 }
 .item h2{
     text-align: right;
     align-items: right;
     font-size: 3rem;
+    padding: 1rem;
 }
 .item p{
     text-align: left;
-    align-items: left;
+    align-items: right;
     font-size: 3rem;
+    padding-left: 100rem;
+    padding-top: 1rem;
+}
+.remove-btn{
+    height: 2rem;
+    align-items: right;
+    text-align: center;
+    width: 7rem;
+    padding-bottom: 4rem;
+    margin: auto 2rem;
+    border-radius: 5rem;
+    background-color: #fbda4b;
+    border: 1px solid #773d03;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.total h2{
+    justify-content: right;
+    align-items: right;
 }
