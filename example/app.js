@@ -253,3 +253,8 @@ function popCart() {
     cart.style.display = "none";
   }
 }
+
+let total = 0;
+function addTotal() {
+  let total = 0;
+}
